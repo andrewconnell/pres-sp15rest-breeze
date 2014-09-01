@@ -39,14 +39,14 @@ SharePoint 2013 REST API - Get Many Items
 - Point to the collection & get all
 
 ````javascript
-var requestUri = _spPageContextInfo.webAbsoluteUrl +'/_api/Web/Lists’
+var requestUri = _spPageContextInfo.webAbsoluteUrl +'/_api/Web/Lists'
   +'/getByTitle(\'Contacts\')/items/?'
   +'$select=Id,FirstName,Title,Email';
 
 // execute AJAX request
 var requestHeaders = { 'accept': 'application/json;odata=verbose' };
 
-$.ajax({
+jQuery.ajax({
   url: requestUri,
   headers: requestHeaders,
   success: function (response){ /* do something on success */ },
@@ -69,7 +69,7 @@ var requestUri = _spPageContextInfo.webAbsoluteUrl + '/_api/Web/Lists'
 // execute AJAX request
 var requestHeaders = { 'accept': 'application/json;odata=verbose' };
 
-$.ajax({
+jQuery.ajax({
   url: requestUri,
   headers: requestHeaders,
   success: function (response){ /* do something on success */ },
@@ -103,7 +103,7 @@ var customerData = {
 };
 requestBody = JSON.stringify(customerData);
 
-$.ajax({
+jQuery.ajax({
   url: requestUri,
   type: 'POST',
   contentType: 'application/json;odata=verbose',
@@ -143,7 +143,7 @@ var customerData = {
 };
 requestBody = JSON.stringify(customerData);
 
-$.ajax({
+jQuery.ajax({
   url: requestUri,
   type: 'POST',
   contentType: 'application/json;odata=verbose',
@@ -173,7 +173,7 @@ var requestHeaders = {
   'If-Match': etag
 };
 
-$.ajax({
+jQuery.ajax({
   url: requestUri,
   type: 'DELETE',
   headers: requestHeaders,
