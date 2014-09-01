@@ -1,11 +1,9 @@
 BreezeJS Makes Client-Side SharePoint 2013 REST Development a... BREEZE!
-===================
+========================================================================
 *Follow along at [github.com/andrewconnell/pres-sp15rest-breeze](http://github.com/andrewconnell/pres-sp15rest-breeze)!*
 
-SharePoint's REST API
-===================
-
-##SharePoint 2013 REST API
+SharePoint 2013 REST API
+========================
 - Introduced with read/write support for lists in SharePoint 2010
 
 ````
@@ -15,16 +13,19 @@ http://intranet.contoso.com/_layouts/ListData.svc
 - Dramatically expanded in SharePoint 2013 to support more than lists
 - Based on [OData v3.0](http://www.odata.org/documentation/odata-version-3-0/) but contains some oddities & inconsistencies
 
-##SharePoint REST API Advantages :+1::+1:
+SharePoint REST API Advantages :+1::+1:
+---------------------------------------
 - Full control over payload
 - Standard response type
 - Consumers can use any technology on any platform
 
-##SharePoint REST API Disadvantages :-1::-1:
+SharePoint REST API Disadvantages :-1::-1:
+------------------------------------------
 - Have to write all the plumbing
 - More chatty than CSOM
 
-##What about SharePoint's CSOM?
+What about SharePoint's CSOM?
+-----------------------------
 - CSOM is a proxy wrapper around the same endpoint
 - Only available to .NET, Silverlight & JavaScript
 - Not available to other technologies
@@ -33,7 +34,8 @@ http://intranet.contoso.com/_layouts/ListData.svc
 
 
 
-##SharePoint 2013 REST API - Get Many Items
+SharePoint 2013 REST API - Get Many Items
+-----------------------------------------
 - Point to the collection & get all
 
 ````javascript
@@ -55,7 +57,8 @@ $.ajax({
 
 
 
-##SharePoint 2013 REST API - Get One Item
+SharePoint 2013 REST API - Get One Item
+---------------------------------------
 - Just like **Get Many Items** but point to specific resource
 
 ````javascript
@@ -77,10 +80,11 @@ $.ajax({
 
 
 
-##SharePoint 2013 REST API - Create Item
+SharePoint 2013 REST API - Create Item
+--------------------------------------
 - Point to collection
 - Send object to create (matching metadata) via HTTP **POST**
-- Include **X-REQUEST-DIGEST** header
+- Include `X-REQUEST-DIGEST` header
 
 ````javascript
 var requestUri = _spPageContextInfo.webAbsoluteUrl + '/_api/Web/Lists'
@@ -112,12 +116,13 @@ $.ajax({
 
 
 
-##SharePoint 2013 REST API - Update Item
+SharePoint 2013 REST API - Update Item
+--------------------------------------
 - Point to specific resource you want to update
 - Send object to create (matching metadata) via HTTP **POST**
-- If updating only fields submitted, include **X-HTTP-METHOD** header set to **MERGE**
-- Include **X-REQUEST-DIGEST** header
-- Include **IF-MATCH** header so updating intended version
+- If updating only fields submitted, include `X-HTTP-METHOD` header set to **MERGE**
+- Include `X-REQUEST-DIGEST` header
+- Include `IF-MATCH` header so updating intended version
 
 ````javascript
 var requestUri = _spPageContextInfo.webAbsoluteUrl + '/_api/Web/Lists'
@@ -151,11 +156,12 @@ $.ajax({
 
 
 
-##SharePoint 2013 REST API - Delete Item
+SharePoint 2013 REST API - Delete Item
+--------------------------------------
 - Point to specific resource you want to delete
 - Use HTTP **DELETE**
-- Include **X-REQUEST-DIGEST** header
-- Include **IF-MATCH** header with ***** value
+- Include `X-REQUEST-DIGEST` header
+- Include `IF-MATCH` header with `*` value
 
 ````javascript
 var requestUri = _spPageContextInfo.webAbsoluteUrl + '/_api/Web/Lists'
@@ -179,7 +185,8 @@ $.ajax({
 
 
 
-#Introducing BreezeJS - [www.breezejs.com](http://www.breezejs.com)
+Introducing BreezeJS - [www.breezejs.com](http://www.breezejs.com)
+=========================================
 - Think “ORM / Entity Framework in JavaScript”
 - LINQ-style query syntax
 - All async calls **return promises** :+1:
@@ -188,7 +195,8 @@ $.ajax({
 - Client-side **entity validation**
 - Client-side **change tracking**
 
-##BreezeJS Architecture 101
+BreezeJS Architecture 101
+-------------------------
 - Client & server component
 - Validation
 - Customizeable - data service adapter pattern
@@ -201,19 +209,23 @@ $.ajax({
   - Helpers
   - Custom data service adapters
 
-#BreezeJS & SharePoint 2013 REST API
+BreezeJS & SharePoint 2013 REST API
+===================================
 - Doesn't work out of the box :disappointed:
 
-##SharePoint's REST API not compliant with OData 3.0 spec
+SharePoint's REST API not compliant with OData 3.0 spec
+-------------------------------------------------------
 - No support for `$batch`
 - Invalid `$metadata` response
 
-##Requires non-standard things in some requests
-- For HTTP POST, PUT, DELETE must include **X-RequestDigest** in header
+Requires non-standard things in some requests
+---------------------------------------------
+- For HTTP POST, PUT, DELETE must include `X-RequestDigest` in header
 - Doesn't support HTTP PATCH / MERGE
-  - Uses **X-MERGE-METHOD** header instead
+  - Uses `X-MERGE-METHOD` header instead
 
-##We Got it Working!
+We Got it Working!
+------------------
 - Created custom BreezeJS data service adapter for SharePoint
   - Overrides communication **BeezeJS :left_right_arrow: SharePoint**
 - Configure Breeze for manual metadata store creation (*not automatic*)
@@ -223,8 +235,9 @@ $.ajax({
 
 
 
-##SharePoint 2013 REST API with BreezeJS - Get Many Items
-- After a little setup...
+SharePoint 2013 REST API with BreezeJS - Get Many Items
+-------------------------------------------------------
+After the one time setup...
 
 ````javascript
 var contactType = metadataStore.getEntityType('Contact');
@@ -236,8 +249,9 @@ var queryAsPromise = breeze.EntityQuery
 
 
 
-##SharePoint 2013 REST API with BreezeJS - Get Many Items
-- After a little setup...
+SharePoint 2013 REST API with BreezeJS - Get Many Items
+-------------------------------------------------------
+After the one time setup...
 
 ````javascript
 // try to get a single item from the cache, then revert to server
@@ -258,8 +272,9 @@ queryAsPromise.then(function(data){
 
 
 
-##SharePoint 2013 REST API with BreezeJS - Create Item
-- After a little setup...
+SharePoint 2013 REST API with BreezeJS - Create Item
+----------------------------------------------------
+After the one time setup...
 
 ````javascript
 // get reference to our entity type...
@@ -275,8 +290,9 @@ var resultPromise = entityManager.saveChanges();
 
 
 
-##SharePoint 2013 REST API with BreezeJS - Update Item
-- After a little setup...
+SharePoint 2013 REST API with BreezeJS - Update Item
+----------------------------------------------------
+After the one time setup...
 
 ````javascript
 var entity = // some query to get an item
@@ -293,8 +309,9 @@ var resultPromise = entityManager.rejectChanges();
 
 
 
-##SharePoint 2013 REST API with BreezeJS - Delete Item
-- After a little setup...
+SharePoint 2013 REST API with BreezeJS - Delete Item
+----------------------------------------------------
+After the one time setup...
 
 ````javascript
 var entity = // some query to get an item
@@ -310,7 +327,8 @@ var resultPromise = entityManager.rejectChanges();
 ````
 
 
-#So, How to Set it Up?
+So, How to Set it Up?
+=====================
 Only 4 easy steps...
 
   1. Apply the NuGet package to your project - **[Breeze.DataService.SharePoint](http://www.nuget.org/packages/Breeze.DataService.SharePoint)**
@@ -322,7 +340,8 @@ Refer to this sample project - [github.com/andrewconnell/breezeSP2013Sample](htt
 
 
 
-##Step 2 - Configure BreezeJS SharePoint Data Service Adapter
+Step 2 - Configure BreezeJS SharePoint Data Service Adapter
+-----------------------------------------------------------
 ````javascript
 // configure breeze to use SharePoint OData service
 var dsAdapter = breeze.config.initializeAdapterInstance('dataService', 'SharePointOData', true);
@@ -336,7 +355,8 @@ dsAdapter.getRequestDigest = function () {
 
 
 
-##Step 3 - Create & Populate the BreezeJS Metadata Store
+Step 3 - Create & Populate the BreezeJS Metadata Store
+------------------------------------------------------
 ````javascript
 // create a new breeze metadata store
 metadataStore = new breeze.MetadataStore();
@@ -365,7 +385,8 @@ helper.addTypeToStore(metadataStore, contactEntity);
 ````
 
 
-##Step 4 - Initialize BreezeJS
+Step 4 - Initialize BreezeJS
+----------------------------
 ````javascript
 // get reference to contact entity type
 contactType = metadataStore.getEntityType('Contact');
@@ -390,7 +411,8 @@ entityManager = new breeze.EntityManager({
 
 
 
-#What's Next for BreezeJS & SharePoint?
+What's Next for BreezeJS & SharePoint?
+======================================
 - SharePoint 2010 `listdata.svc` REST support - [issue #2](https://github.com/andrewconnell/breeze.js.labs/issues/2)
 - SharePoint 2013 cross domain support - [issue #4](https://github.com/andrewconnell/breeze.js.labs/issues/4)
 - Simplify setup & registration
@@ -404,7 +426,7 @@ entityManager = new breeze.EntityManager({
     - NuGet package will get updated too
 
 
-> #References
+>#References
 - AC's Blog Posts
   - [BreezeJS Makes Client-Side SharePoint 2013 REST Development a… BREEZE!](http://www.andrewconnell.com/blog/breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)
   - [Understanding Challenges Using Breeze & SharePoint Out-Of-The-Box](http://www.andrewconnell.com/blog/understanding-challenges-using-breeze-sharepoint-out-of-the-box)
