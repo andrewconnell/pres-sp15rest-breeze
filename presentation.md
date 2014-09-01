@@ -129,7 +129,7 @@ var requestUri = _spPageContextInfo.webAbsoluteUrl + '/_api/Web/Lists'
   +'/getByTitle(\'Contacts\')/items(1)';
 
 var requestHeaders = {
-  'Accept': 'application/json;odata=verbose',
+  'ACCEPT': 'application/json;odata=verbose',
   'X-RequestDigest': $('#__REQUESTDIGEST').val(),
   'X-HTTP-Method': 'MERGE',
   'If-Match': etag
@@ -168,7 +168,7 @@ var requestUri = _spPageContextInfo.webAbsoluteUrl + '/_api/Web/Lists'
   +'/getByTitle(\'Contacts\')/items(1)';
 
 var requestHeaders = {
-  'Accept': 'application/json;odata=verbose',
+  'ACCEPT': 'application/json;odata=verbose',
   'X-RequestDigest': $('#__REQUESTDIGEST').val(),
   'If-Match': etag
 };
