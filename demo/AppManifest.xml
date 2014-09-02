@@ -7,7 +7,7 @@
      SharePointMinVersion="15.0.0.0"
 >
   <Properties>
-    <Title>Learning Path Manager</Title>
+    <Title>Learning Path Manager - AngularJS + BreezeJS</Title>
     <StartPage>~appWebUrl/appLauncher.html?{StandardTokens}&amp;SPHostTitle={HostTitle}&amp;SPHostLogoUrl={HostLogoUrl}</StartPage>
   </Properties>
 
