@@ -426,7 +426,7 @@ What's Next for BreezeJS & SharePoint?
     - NuGet package will get updated too
 
 
->#References
+>#Resources
 - AC's Blog Posts
   - [BreezeJS Makes Client-Side SharePoint 2013 REST Development a… BREEZE!](http://www.andrewconnell.com/blog/breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)
   - [Understanding Challenges Using Breeze & SharePoint Out-Of-The-Box](http://www.andrewconnell.com/blog/understanding-challenges-using-breeze-sharepoint-out-of-the-box)
