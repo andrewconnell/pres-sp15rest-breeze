@@ -327,6 +327,7 @@ var resultPromise = entityManager.rejectChanges();
 ````
 
 
+
 So, How to Set it Up?
 =====================
 Only 4 easy steps...
@@ -408,6 +409,12 @@ entityManager = new breeze.EntityManager({
   metadataStore: metadataStore
 });
 ````
+
+
+
+Demo Time... Let's Take a Look!
+==============================
+![demo time](img/punchbear.jpeg)
 
 
 
