@@ -3,7 +3,7 @@ BreezeJS Makes Client-Side SharePoint 2013 REST Development a... BREEZE!
 > *Follow along at [github.com / andrewconnell / pres-sp15rest-breeze](http://github.com/andrewconnell/pres-sp15rest-breeze)*
 
 Overview
-==
+========
 - [SharePoint 2013 REST API](#sharepoint-2013-rest-api)
 - [Introducing BreezeJS](#introducing-breezejs---wwwbreezejscom)
 - [So, How to Set it Up?](#so-how-to-set-it-up)
@@ -204,7 +204,7 @@ jQuery.ajax({
 &laquo; **[back to top](#breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)** &raquo;
 
 Introducing BreezeJS - [www.breezejs.com](http://www.breezejs.com)
-=========================================
+==================================================================
 - Think “ORM / Entity Framework in JavaScript”
 - LINQ-style query syntax
 - All async calls **return promises** :+1:
@@ -445,7 +445,7 @@ entityManager = new breeze.EntityManager({
 
 
 Demo Time... Let's Take a Look!
----
+-------------------------------
 ![demo time](img/punchbear.jpeg)
 
 
