@@ -1,6 +1,6 @@
 BreezeJS Makes Client-Side SharePoint 2013 REST Development a... BREEZE!
 ========================================================================
-> *View the presentation here [github.com / andrewconnell / pres-sp15rest-breeze](http://github.com/andrewconnell/pres-sp15rest-breeze)*
+> *View the presentation here [andrewconnell.github.io / pres-sp15rest-breeze](http://andrewconnell.github.io/pres-sp15rest-breeze)*
 >>
 >*Why do [I use GitHub for developer presentations & benefits to you](http://www.andrewconnell.com/blog/using-github-for-developer-presentations)?*
 
