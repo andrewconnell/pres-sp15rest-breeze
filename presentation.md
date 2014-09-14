@@ -1,7 +1,3 @@
-BreezeJS Makes Client-Side SharePoint 2013 REST Development a... BREEZE!
-========================================================================
-> *Follow along at [github.com / andrewconnell / pres-sp15rest-breeze](http://github.com/andrewconnell/pres-sp15rest-breeze)*
-
 Overview
 ========
 - [SharePoint 2013 REST API](#sharepoint-2013-rest-api)
@@ -9,33 +5,27 @@ Overview
 - [So, How to Set it Up?](#so-how-to-set-it-up)
 - [What's Next for BreezeJS & SharePoint?](#whats-next-for-breezejs--sharepoint)
 
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
 
 
 SharePoint 2013 REST API
 ========================
 - Introduced with read/write support for lists in SharePoint 2010
-
-````
-http://intranet.contoso.com/_layouts/ListData.svc
-````
-
+  - `http://intranet.contoso.com/_layouts/ListData.svc`
 - Dramatically expanded in SharePoint 2013 to support more than lists
 - Based on [OData v3.0](http://www.odata.org/documentation/odata-version-3-0/) but contains some oddities & inconsistencies
 
 
 
-SharePoint REST API Advantages :+1::+1:
----------------------------------------
+SharePoint REST API Advantages
+------------------------------
 - Full control over payload
 - Standard response type
 - Consumers can use any technology on any platform
 
 
 
-SharePoint REST API Disadvantages :-1::-1:
-------------------------------------------
+SharePoint REST API Disadvantages
+---------------------------------
 - Have to write all the plumbing
 - More chatty than CSOM
 
@@ -201,13 +191,13 @@ jQuery.ajax({
 
 
 
-&laquo; **[back to top](#breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)** &raquo;
+Introducing BreezeJS
+====================
+[www.breezejs.com](http://www.breezejs.com)
 
-Introducing BreezeJS - [www.breezejs.com](http://www.breezejs.com)
-==================================================================
-- Think “ORM / Entity Framework in JavaScript”
+- Think "ORM / Entity Framework in JavaScript"
 - LINQ-style query syntax
-- All async calls **return promises** :+1:
+- All async calls **return promises** 
 - Query & navigate to related entities
 - Query locally with automatic **client side caching**
 - Client-side **entity validation**
@@ -219,23 +209,21 @@ BreezeJS Architecture 101
 -------------------------
 - Client & server component
 - Validation
-- Customizeable - data service adapter pattern
+- Customizable - data service adapter pattern
   - OData
   - WebAPI
   - WebAPIOData
   - SharePoint
-- Breeze Labs - [link to docs on breezejs.com](http://www.breezejs.com/documentation/what-are-breeze-labs)
+- Breeze Labs
   - AngularJS directives
   - Helpers
   - Custom data service adapters
 
 
 
-&laquo; **[back to top](#breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)** &raquo;
-
 BreezeJS & SharePoint 2013 REST API
 ===================================
-- Doesn't work out of the box :disappointed:
+Doesn't work out of the box
 
 
 
@@ -257,7 +245,7 @@ Requires non-standard things in some requests
 We Got it Working!
 ------------------
 - Created custom BreezeJS data service adapter for SharePoint
-  - Overrides communication **BeezeJS :left_right_arrow: SharePoint**
+  - Overrides communication between **BeezeJS & SharePoint**
 - Configure Breeze for manual metadata store creation (*not automatic*)
 - All included in NuGet package - **[Breeze.DataService.SharePoint](http://www.nuget.org/packages/Breeze.DataService.SharePoint)**
   - Includes everything you need, including BreezeJS client
@@ -358,8 +346,6 @@ var resultPromise = entityManager.rejectChanges();
 
 
 
-&laquo; **[back to top](#breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)** &raquo;
-
 So, How to Set it Up?
 =====================
 Only 4 easy steps...
@@ -369,7 +355,13 @@ Only 4 easy steps...
   3. Create & populate the BreezeJS metadata store
   4. Initialize BreezeJS
 
-Refer to this sample project - [github.com/andrewconnell/breezeSP2013Sample](https://github.com/andrewconnell/BreezeSP2013Sample)
+
+
+Step 1 - Get the NuGet package
+------------------------------
+````powershell
+Install-Package "Breeze.DataService.SharePoint"
+````
 
 
 
@@ -418,6 +410,7 @@ helper.addTypeToStore(metadataStore, contactEntity);
 ````
 
 
+
 Step 4 - Initialize BreezeJS
 ----------------------------
 ````javascript
@@ -450,43 +443,33 @@ Demo Time... Let's Take a Look!
 
 
 
-&laquo; **[back to top](#breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)** &raquo;
-
 What's Next for BreezeJS & SharePoint?
 ======================================
 - SharePoint 2010 `listdata.svc` REST support - [issue #2](https://github.com/andrewconnell/breeze.js.labs/issues/2)
 - SharePoint 2013 cross domain support - [issue #4](https://github.com/andrewconnell/breeze.js.labs/issues/4)
 - Simplify setup & registration
 - Entity metadata generation
-- How to stay informed of updates...
-  - Follow my blog or me on Twitter
-  - Follow my fork of the BreezeJS Labs repo - [github.com/andrewconnell/breeze.js.labs](https://github.com/andrewconnell/breeze.js.labs)
-    - All issues, enhancements & milestones in [issues list](https://github.com/andrewconnell/breeze.js.labs/issues)
-    - Contribute, follow, report bugs
-    - Edits sent back to BreezeJS pull requests & new drops ship every few weeks
-    - NuGet package will get updated too
-
-
-Thanks! Any Questions?
-======================
-![questions?](img/clapping.gif)
 
 
 
-Andrew Connell
-==============
-- [www.andrewconnell.com](http://www.andrewconnell.com) | [@andrewconnell](http://www.twitter.com/andrewconnell)
-- this pres: [github.com / andrewconnell / pres-sp15rest-breeze](http://github.com/andrewconnell/pres-sp15rest-breeze)
+How to stay informed of updates...
+----------------------------------
+- Follow [my blog](http://www.andrewconnell.com) or me on Twitter [@andrewconnell](http://www.twitter.com/andrewconnell)
+- Follow my fork of the BreezeJS Labs repo
+  - [github.com/andrewconnell/breeze.js.labs](https://github.com/andrewconnell/breeze.js.labs)
+  - All issues, enhancements & milestones in [issues list](https://github.com/andrewconnell/breeze.js.labs/issues)
+  - Contribute, follow, report bugs
+  - Edits sent back to BreezeJS pull requests & new drops ship every few weeks
 
 
 
->#Resources
+#Resources
 - AC's Blog Posts
-  - [BreezeJS Makes Client-Side SharePoint 2013 REST Development a… BREEZE!](http://www.andrewconnell.com/blog/breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)
+  - [BreezeJS Makes Client-Side SharePoint 2013 REST Development a... BREEZE!](http://www.andrewconnell.com/blog/breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)
   - [Understanding Challenges Using Breeze & SharePoint Out-Of-The-Box](http://www.andrewconnell.com/blog/understanding-challenges-using-breeze-sharepoint-out-of-the-box)
   - [Getting BreezeJS to Work with the SharePoint 2013 REST API](http://www.andrewconnell.com/blog/getting-breezejs-to-work-with-the-sharepoint-2013-rest-api)
-- Demo project - [github.com/andrewconnell/breezeSP2013Sample](https://github.com/andrewconnell/BreezeSP2013Sample)
-- BreezeJS Labs fork for SharePoint data service adapter development - [github.com/andrewconnell/breeze.js.labs](https://github.com/andrewconnell/breeze.js.labs)
-
-
-&laquo; **[back to top](#breezejs-makes-client-side-sharepoint-2013-rest-development-a-breeze)** &raquo;
+- [What are Breeze Labs?](http://www.breezejs.com/documentation/what-are-breeze-labs)
+- Demo project
+  - [github.com/andrewconnell/breezeSP2013Sample](https://github.com/andrewconnell/BreezeSP2013Sample)
+- BreezeJS Labs fork for SharePoint data service adapter development
+  - [github.com/andrewconnell/breeze.js.labs](https://github.com/andrewconnell/breeze.js.labs)
