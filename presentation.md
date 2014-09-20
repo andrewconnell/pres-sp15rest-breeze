@@ -51,7 +51,9 @@ var requestUri = _spPageContextInfo.webAbsoluteUrl +'/_api/Web/Lists'
   +'$select=Id,FirstName,Title,Email';
 
 // execute AJAX request
-var requestHeaders = { 'accept': 'application/json;odata=verbose' };
+var requestHeaders = {
+  'ACCEPT': 'application/json;odata=verbose'
+};
 
 jQuery.ajax({
   url: requestUri,
@@ -74,7 +76,9 @@ var requestUri = _spPageContextInfo.webAbsoluteUrl + '/_api/Web/Lists'
   +'$select=Id,FirstName,Title,Email' + '&$filter=Id eq 1';
 
 // execute AJAX request
-var requestHeaders = { 'accept': 'application/json;odata=verbose' };
+var requestHeaders = {
+  'ACCEPT': 'application/json;odata=verbose'
+};
 
 jQuery.ajax({
   url: requestUri,
@@ -155,7 +159,7 @@ jQuery.ajax({
   type: 'POST',
   contentType: 'application/json;odata=verbose',
   headers: requestHeaders,
-  data: JSON.stringify(customerData),
+  data: requestBody,
   success: function (response){ /* do something on success */ },
   error: function(error){ /* do something on fail */ }
 });
@@ -177,7 +181,7 @@ var requestUri = _spPageContextInfo.webAbsoluteUrl + '/_api/Web/Lists'
 var requestHeaders = {
   'ACCEPT': 'application/json;odata=verbose',
   'X-RequestDigest': $('#__REQUESTDIGEST').val(),
-  'If-Match': etag
+  'If-Match': '*'
 };
 
 jQuery.ajax({
@@ -267,8 +271,8 @@ var queryAsPromise = breeze.EntityQuery
 
 
 
-SharePoint 2013 REST API with BreezeJS - Get Many Items
--------------------------------------------------------
+SharePoint 2013 REST API with BreezeJS - Get One Item
+-----------------------------------------------------
 After the one time setup...
 
 ````javascript
