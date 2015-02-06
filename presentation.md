@@ -233,7 +233,8 @@ Doesn't work out of the box
 
 SharePoint's REST API not compliant with OData 3.0 spec
 -------------------------------------------------------
-- No support for `$batch`
+- No support for <strike>`$batch`</strike>
+  - Now there is!!! See: [github.com / andrewconnell / sp-O365-rest](http://www.github.com/andrewconnell/sp-O365-rest)
 - Invalid `$metadata` response
 
 
