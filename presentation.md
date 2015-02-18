@@ -478,3 +478,5 @@ How to stay informed of updates...
   - [github.com/andrewconnell/breezeSP2013Sample](https://github.com/andrewconnell/BreezeSP2013Sample)
 - BreezeJS Labs fork for SharePoint data service adapter development
   - [github.com/andrewconnell/breeze.js.labs](https://github.com/andrewconnell/breeze.js.labs)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-59889067-1/pres-sp15rest-breeze/presentation)](https://github.com/igrigorik/ga-beacon)

@@ -29,3 +29,5 @@ Objectives
 - Learn details and nuances of working with the SharePoint REST API
 - Learn how to setup the Breeze library to work with the SharePoint 2013 REST API
 - Learn how to be more productive writing queries using Breeze and leveraging additional data validation techniques
+
+[![Analytics](https://ga-beacon.appspot.com/UA-59889067-1/pres-sp15rest-breeze/readme)](https://github.com/igrigorik/ga-beacon)
