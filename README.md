@@ -1,22 +1,19 @@
 BreezeJS Makes Client-Side SharePoint 2013 REST Development a... BREEZE!
 ========================================================================
-> *View the presentation here [andrewconnell.github.io / pres-sp15rest-breeze](http://andrewconnell.github.io/pres-sp15rest-breeze)*
->
->*Why do [I use GitHub for developer presentations & benefits to you](http://www.andrewconnell.com/blog/using-github-for-developer-presentations)?*
 
 Abstract
 --------
-> SharePoint 2013 gives developers two options for accessing their data remotely using either the client side object model (CSOM) or OData… also known as REST. Both provide different methods for getting data and have their own advantages as well as disadvantages. For those of us who prefer the REST option, we know there are a few challenges in that we have a lot of plumbing we need to write. In this session you’ll learn how the free and open source library Breeze turns working with the SharePoint REST API a breeze! Breeze brings validation, entity checks, batching, change tracking, and client-side caching to the client... think an ORM like Entity Framework in JavaScript! In this session you’ll learn how to set it up, how to configure it, how to write different types of queries and then how to even use some really slick data validation capabilities in the browser!
+> SharePoint, both in on-premises & SharePoint Online in Office 365, offer a REST API for developers to create server side and client side solutions. In this session we'll dive deep into the world of REST and see what's involved in creating client-side, JavaScript based solutions as well as server-side managed code solutions. After exploring all the nuts and bolts to become a REST ninja, we will then look at the free and open source library BreezeJS that simplifies a lot of the plumbing work for you. In this session you'll learn how to set it up, how to configure it, how to write different types of queries and then how to even use some really slick data validation capabilities in the browser!
 
 Speaker Bio - Andrew Connell
 ----------------------------
-Andrew Connell is an independent consultant that enjoys development, writing & teaching. He is an ten-time recipient of Microsoft’s Most Valuable Professional (MVP) award & has contributed to numerous books articles and projects over the years. You can learn from Andrew as when he teaches hands-on courses through [www.CriticalPathTraining.com](http://www.CriticalPathTraining.com) or through one of the many on-demand classes he has published though [www.Pluralsight.com](http://www.Pluralsight.com). Andrew has spoken at conferences and community events in the North America, Europe & Australia & is a co-host of the popular podcast the [Microsoft Cloud Show](http://www.MicrosoftCloudShow.com). 
-
+Andrew Connell is an independent consultant that enjoys development, writing, teaching and is an eleven-time recipient of Microsoft's Most Valuable Professional (MVP) award. He focused on web related technologies including Microsoft's Azure & Office 365 platforms, the .NET Framework, Angular, JavaScript, Node.js... if it's cutting edge web you'll find Andrew there! 
+Andrew teaches these topics through his numerous videos and courses through [Critical Path Training](http://www.CriticalPathTraining.com) and [Pluralsight](http://www.pluralsight.com/author/andrew-connell). You can check out what he’s currently up to, what's on his mind or where he's speaking on his [blog](http://www.andrewconnell.com), by following him on Twitter [@andrewconnell](http://www.twitter.com/andrewconnell) or subscribe to his cloud-related podcast, the [Microsoft Cloud Show](http://www.microsoftcloudshow.com). 
+ 
 - blog: [www.andrewconnell.com](http://www.andrewconnell.com)
 - twitter: [@andrewconnell](http://www.twitter.com/andrewconnell)
 - github: [github.com / andrewconnell](http://github.com/andrewconnell)
 - learn more about me on my blog: [www.andrewconnell.com / about](http://www.andrewconnell.com/About)
-
 
 
 Meta

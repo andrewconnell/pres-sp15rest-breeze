@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Content-Type: multipart/mixed; boundary=batchresponse_[GUID-3]
+X-RequestDigest: 0x3F168[...]
+
+--batchresponse_[GUID-3]
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 201 Created
+CONTENT-TYPE: application/atom+xml;type=entry;charset=utf-8
+ETAG: "1"
+LOCATION: https://.../_api/Web/Lists(guid'3f472226-21b1-4e71-9c91-7dade1aa57b8')/Items(19)
+
+<?xml version="1.0" encoding="utf-8"?><entry>...</entry>
+--batchresponse_[GUID-3]
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 201 Created
+CONTENT-TYPE: application/atom+xml;type=entry;charset=utf-8
+ETAG: "1"
+LOCATION: https://.../_api/Web/Lists(guid'3f472226-21b1-4e71-9c91-7dade1aa57b8')/Items(20)
+
+<?xml version="1.0" encoding="utf-8"?><entry>...</entry>
+--batchresponse_[GUID-3]
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 200 OK
+CONTENT-TYPE: application/json;odata=verbose;charset=utf-8
+
+{"d":{"results":[...]}}
+--batchresponse_[GUID-3]--

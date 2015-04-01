@@ -1,0 +1,41 @@
+POST https://../_api/$batch HTTP/1.1
+Host: tenant.sharepoint.com
+Accept: */*
+Origin: https://tenant.sharepoint.com
+X-RequestDigest: 0x3F168[...]
+Content-Type: multipart/mixed; boundary="batch_[GUID-1]"
+
+--batch_[GUID-1]
+Content-Type: multipart/mixed; boundary="changeset_[GUID-2]"
+Host: tenant.sharepoint.com
+Content-Length: 1271
+Content-Transfer-Encoding: binary
+
+--changeset_[GUID-2]
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+POST https://../_api/web/lists/getbytitle('Drivers')/items HTTP/1.1
+Content-Type: application/json;odata=verbose
+
+{"__metadata":{"type":"SP.Data.DriversListItem"},"Title":"Fernando Alonso","Team":"McLaren"}
+
+--changeset_[GUID-2]
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+POST https://../_api/web/lists/getbytitle('Drivers')/items HTTP/1.1
+Content-Type: application/json;odata=verbose
+
+{"__metadata":{"type":"SP.Data.DriversListItem"},"Title":"Filipe Massa","Team":"Williams"}
+
+--changeset_[GUID-2]--
+
+--batch_[GUID-1]
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+GET https://../_api/web/lists/getbytitle('Drivers')/items?$orderby=Title HTTP/1.1
+Accept: application/json;odata=verbose
+
+--batch_[GUID-1]--

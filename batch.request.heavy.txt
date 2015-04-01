@@ -1,0 +1,49 @@
+POST https://aconn-fe6c88f31b8e0b.sharepoint.com/sites/dev/SpRestBatchSample/_api/$batch HTTP/1.1
+Host: aconn-fe6c88f31b8e0b.sharepoint.com
+Connection: keep-alive
+Content-Length: 1903
+Accept: */*
+Origin: https://aconn-fe6c88f31b8e0b.sharepoint.com
+X-Requested-With: XMLHttpRequest
+X-RequestDigest: 0x3F168AD947C57DCB851D5EFF0F7A9D8CFBB1DF3D1F574BC7D0AF2C7E38DF5AF28C9F311B1ADB8447D965F037657B4DF572C1F9DD139D9E6AE3A565B659134FA5,30 Nov 2014 12:55:26 -0000
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36
+Content-Type: multipart/mixed; boundary="batch_45473b4e-5ce5-409d-dd5a-3d60082df906"
+Referer: https://aconn-fe6c88f31b8e0b.sharepoint.com/sites/dev/SpRestBatchSample/Pages/Default.aspx?SPHostUrl=https%3A%2F%2Faconn%2Esharepoint%2Ecom%2Fsites%2Fdev&SPLanguage=en%2DUS&SPClientTag=0&SPProductNumber=16%2E0%2E3431%2E1218&SPAppWebUrl=https%3A%2F%2Faconn%2Dfe6c88f31b8e0b%2Esharepoint%2Ecom%2Fsites%2Fdev%2FSpRestBatchSample
+Accept-Encoding: gzip,deflate
+Accept-Language: en-US,en;q=0.8
+Cookie: WSS_FullScreenMode=false; rtFa=tuVED+yNm9wcX/FhwoP4LWBIKTDdkU57FJQFUXDB1HxxIOrPF9UmWGJK8MVlRWuyRhJtagkeIb0pEXuAse2dC1/5o/af/PZO9gWU4QGu7hkePjAytr5+owuHuWBwX7kpkGglQn541INJB4Z1g1xKJGuDvtyA8XIJLv0m/ZrhQQbhc6/jz3LsriZs9Amy+fV3iDSHgdBLZ+Y89khmU2G+qwVcZQqJvBC0Yp0pJrYbj58QY5KldnzEBUwo6GTMruGkdQxFgPWHt/G4EKCeilSyHfvg8V2HK6TAKFo7K9zWwCopntObFEpy45Eumke/RVDFSyd5BlI/KhhEFszw9dCzqR/EIWHQAV0uBxcWsKlou7LaHo/tSN03W3vFwb1rIFiZIAAAAA==; FedAuth=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+RmFsc2UsMGguZnxtZW1iZXJzaGlwfDEwMDM3ZmZlODBjYjNkNjJAbGl2ZS5jb20sMCMuZnxtZW1iZXJzaGlwfG1lQGFuZHJld2Nvbm5lbGwuY29tLDEzMDYyMjU3NjYxMjkxNTAwNCxGYWxzZSxrL3IxRXN3WG1RMk1rYmY0eFhQWXZoUVZ0clBnTWcwZVo0NTh4aDErd3RwbFk5L1RIYXFObUtuaW1BZThDMzh0b3hLNmdSSU5ZTDU2UzBhUDFyM3FRVU4xTStpeXg2TS9ma2daU1licnEzcDFQRGRCOGZVazFheVpXUkxlRk1iSk12ZnhzUEFaUjlrYjcyS1JBRWQ4emtLdk5WR21ScFllOUpmbE40eVhzamJmR1k4cDNqZ3VKK2ltaVBUWXhDQzJZbzEzMGg2bDU4cjZ3ZGdJZ2JqTk9iYk44R3VDNkNNNExLNEg0RUNNQnpNQmFsQnF3anhxa0RKcGlYZ1Q4VjRKQkozWDlPbUVMekpRQ1RSM0NwTkVrNnF2eDZHUW1XR0UvMFZ0bVErN1hZNlFMUVFmanRiVlV1K1FqdW90L3ZNZFJqR0NEZzE0WHlNaDdIWFNnRVJvbnc9PSxodHRwczovL2Fjb25uLWZlNmM4OGYzMWI4ZTBiLnNoYXJlcG9pbnQuY29tL3NpdGVzL2Rldi9TcFJlc3RCYXRjaFNhbXBsZS9QYWdlcy9EZWZhdWx0LmFzcHg/U1BIb3N0VXJsPWh0dHBzOi8vYWNvbm4uc2hhcmVwb2ludC5jb20vc2l0ZXMvZGV2JmFtcDtTUExhbmd1YWdlPWVuLVVTJmFtcDtTUENsaWVudFRhZz0wJmFtcDtTUFByb2R1Y3ROdW1iZXI9MTYuMC4zNDMxLjEyMTgmYW1wO1NQQXBwV2ViVXJsPWh0dHBzOi8vYWNvbm4tZmU2Yzg4ZjMxYjhlMGIuc2hhcmVwb2ludC5jb20vc2l0ZXMvZGV2L1NwUmVzdEJhdGNoU2FtcGxlPC9TUD4=
+
+--batch_45473b4e-5ce5-409d-dd5a-3d60082df906
+Content-Type: multipart/mixed; boundary="changeset_f9c96a07-641a-4897-90ed-d285d2dbfc2e"
+Host: aconn-fe6c88f31b8e0b.sharepoint.com
+Content-Length: 1271
+Content-Transfer-Encoding: binary
+
+--changeset_f9c96a07-641a-4897-90ed-d285d2dbfc2e
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+POST https://aconn-fe6c88f31b8e0b.sharepoint.com/sites/dev/SpRestBatchSample/_api/web/lists/getbytitle('Drivers')/items HTTP/1.1
+Content-Type: application/json;odata=verbose
+
+{"__metadata":{"type":"SP.Data.DriversListItem"},"Title":"Fernando Alonso","Team":"Ferrari"}
+
+--changeset_f9c96a07-641a-4897-90ed-d285d2dbfc2e
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+POST https://aconn-fe6c88f31b8e0b.sharepoint.com/sites/dev/SpRestBatchSample/_api/web/lists/getbytitle('Drivers')/items HTTP/1.1
+Content-Type: application/json;odata=verbose
+
+{"__metadata":{"type":"SP.Data.DriversListItem"},"Title":"Filipe Massa","Team":"Ferrari"}
+
+--changeset_f9c96a07-641a-4897-90ed-d285d2dbfc2e--
+
+--batch_45473b4e-5ce5-409d-dd5a-3d60082df906
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+GET https://aconn-fe6c88f31b8e0b.sharepoint.com/sites/dev/SpRestBatchSample/_api/web/lists/getbytitle('Drivers')/items?$orderby=Title HTTP/1.1
+Accept: application/json;odata=verbose
+
+--batch_45473b4e-5ce5-409d-dd5a-3d60082df906--
